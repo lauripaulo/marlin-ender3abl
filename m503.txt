@@ -1,0 +1,74 @@
+Linear Units:
+ * G21 ; (mm)
+Temperature Units:
+ * M149 C ; Units in Celsius
+Filament settings (Disabled):
+ * M200 S0 D1.75
+Steps per unit:
+ * M92 X80.00 Y80.00 Z400.00 E419.30
+Max feedrates (units/s):
+ * M203 X500.00 Y500.00 Z20.00 E25.00
+Max Acceleration (units/s2):
+ * M201 X500.00 Y500.00 Z100.00 E5000.00
+Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
+ * M204 P500.00 R500.00 T500.00
+Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>):
+ * M205 B20000.00 S0.00 T0.00 J0.08
+Home offset:
+ * M206 X0.00 Y0.00 Z0.00
+Auto Bed Leveling:
+ * M420 S1 Z10.00 ; Leveling ON
+ * G29 W I0 J0 Z0.20253
+ * G29 W I1 J0 Z0.14453
+ * G29 W I2 J0 Z0.13203
+ * G29 W I3 J0 Z0.14253
+ * G29 W I4 J0 Z0.16753
+ * G29 W I0 J1 Z0.14403
+ * G29 W I1 J1 Z0.08703
+ * G29 W I2 J1 Z0.05953
+ * G29 W I3 J1 Z0.06003
+ * G29 W I4 J1 Z0.09753
+ * G29 W I0 J2 Z0.11753
+ * G29 W I1 J2 Z0.05403
+ * G29 W I2 J2 Z0.02203
+ * G29 W I3 J2 Z0.02953
+ * G29 W I4 J2 Z0.02003
+ * G29 W I0 J3 Z0.14153
+ * G29 W I1 J3 Z0.08253
+ * G29 W I2 J3 Z0.06403
+ * G29 W I3 J3 Z0.05903
+ * G29 W I4 J3 Z0.04453
+ * G29 W I0 J4 Z0.22203
+ * G29 W I1 J4 Z0.18203
+ * G29 W I2 J4 Z0.17253
+ * G29 W I3 J4 Z0.18453
+ * G29 W I4 J4 Z0.19203
+Material heatup parameters:
+ * M145 S0 H190.00 B50.00 F128
+ * M145 S1 H235.00 B60.00 F0
+Hotend PID:
+ * M301 P22.25 I2.00 D61.87
+Controller Fan:
+ * M710 S255 I0 A1 D60 ; (100% 0%)
+Retract (S<length> F<feedrate> Z<lift>):
+ * M207 S2.00 W13.00 F1800.00 Z0.08
+Recover (S<length> F<feedrate>):
+ * M208 S0.00 W0.00 F1800.00
+Auto-Retract (S<enable>):
+ * M209 S0
+Z-Probe Offset:
+ * M851 X48.00 Y-2.00 Z-1.17 ; (mm)
+Stepper driver current:
+ * M906 X580 Y580 Z580
+ * M906 T0 E650
+Recv: 
+Driver stepping mode:
+ * M569 S1 X Y Z
+ * M569 S1 T0 E
+Linear Advance:
+ * M900 K0.60
+Filament load/unload:
+ * M603 L340.00 U350.00 ; (mm)
+Filament runout sensor:
+ * M412 S1 D25.00 ; Sensor ON
+Recv: ok
